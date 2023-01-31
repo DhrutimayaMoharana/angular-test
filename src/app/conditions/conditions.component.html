@@ -1,0 +1,33 @@
+<h1>conditions works!</h1>
+<h1>If-Else Conditions</h1>
+<h2>::::::::::::::</h2>
+<h1 *ngIf="show=='yes' else elseBlock">
+    if BLock
+</h1>
+<ng-template #elseBlock>
+    <h1>else block</h1>
+</ng-template>
+<h2>::::::::::::::</h2>
+<h2>::::::::::::::</h2>
+<h1 *ngIf="show=='yes';then ifBlock else elseBlock">
+    if BLock
+</h1>
+<ng-template #ifBlock>
+    <h1>IF block</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>else block</h1>
+</ng-template>
+<h2>::::::::::::::</h2>
+<h1>If-Else Conditions with property binding</h1>
+<h2>::::::::::::::</h2>
+<ng-template [ngIf]="color=='Red'">
+    <h1>Red block</h1>
+</ng-template>
+<ng-template [ngIf]="color=='blue'">
+    <h1>Blue block</h1>
+</ng-template>
+<ng-template [ngIf]="color=='green'">
+    <h1>Green block</h1>
+</ng-template>
+<h2>::::::::::::::</h2>

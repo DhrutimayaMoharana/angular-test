@@ -1,0 +1,37 @@
+<h1>CLICK Event</h1>
+<button (click)="getOnClickName(yourName)">Click Me</button>
+<br><br>
+<input type="text" (keyup)="myevent('keyup event')"/>
+<div>
+    <input type="text" #box (keyup.enter)="myevent(box.value)"/>
+</div>
+<div>
+    <input type="text" #box1 (keyup)="myevent(box1.value)"/>
+</div>
+<div>
+    <input type="text" #box1 (keydown)="myevent(box1.value)"/>
+</div>
+<div>
+    <input type="text" #box1 (blur)="myevent('BLUR event')"/>
+</div>
+<div>
+    Double event: <input type="text" #box2 (keyup)="myevent(box2.value)" (blur)="myevent('BLUR event')"/>
+</div>
+<div (mouseover)="mouseOver(des)" style="background-color: aqua;">
+    Mouse Over
+</div>
+<br><br>
+<div (mouseout)="mouseIn(des)" style="background-color: red;">
+    Mouse Out`
+</div>
+<br><br>
+<div >
+    <input type="text" (keyup)="getVal($any($event.target).value)"/>
+</div>
+<br><br>
+<div >
+    <input type="text" (keydown)="getVal($any($event.target).value)" #box123/>
+    <button (click)="getVal(box123.value)">Click</button>
+    <h1 style="background-color: blueviolet;">{{currentval}}</h1>
+</div>
+<br><br>
