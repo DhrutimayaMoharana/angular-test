@@ -1,0 +1,8 @@
+<p>parentcomponent works!</p>
+<!-- <app-childcomponent [item]="data"></app-childcomponent> -->
+
+<app-childcomponent (parentComponent)="parentComponent($event)"></app-childcomponent>
+
+<br><br><br>
+<h3>Name: {{name}}</h3><h3>Age: {{age}}</h3>
+<h1>DATA: {{data.name}}{{data.age}}</h1>

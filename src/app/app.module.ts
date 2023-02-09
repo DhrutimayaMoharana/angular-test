@@ -16,6 +16,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { StylebindingComponent } from './stylebinding/stylebinding.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BootstapngComponent } from './bootstapng/bootstapng.component';
+import { MaterialuiComponent } from './materialui/materialui.component';
+import {MatButtonModule} from '@angular/material/button'
+import {MatSliderModule} from '@angular/material/slider'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ParentcomponentComponent } from './parentcomponent/parentcomponent.component';
+import { ChildcomponentComponent } from './parentcomponent/childcomponent/childcomponent.component';
+import { CsstestcomponentComponent } from './csstestcomponent/csstestcomponent.component';
+import { PipeappComponent } from './pipeapp/pipeapp.component'
 
 @NgModule({
   declarations: [
@@ -29,14 +38,23 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SimpleformComponent,
     HeaderComponent,
     FooterComponent,
-    StylebindingComponent
+    StylebindingComponent,
+    BootstapngComponent,
+    MaterialuiComponent,
+    ParentcomponentComponent,
+    ChildcomponentComponent,
+    CsstestcomponentComponent,
+    PipeappComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     EventmoduleModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    MatButtonModule,
+    MatSliderModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
