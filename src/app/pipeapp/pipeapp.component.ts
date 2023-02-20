@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class PipeappComponent {
 
+  name="dhruti";
+  today=Date.now();
+  val=100;
 }

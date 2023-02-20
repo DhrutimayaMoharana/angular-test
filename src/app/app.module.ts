@@ -24,7 +24,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ParentcomponentComponent } from './parentcomponent/parentcomponent.component';
 import { ChildcomponentComponent } from './parentcomponent/childcomponent/childcomponent.component';
 import { CsstestcomponentComponent } from './csstestcomponent/csstestcomponent.component';
-import { PipeappComponent } from './pipeapp/pipeapp.component'
+import { PipeappComponent } from './pipeapp/pipeapp.component';
+import {RoutingmoduleModule} from './routingmodule/routingmodule.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomStyleDirective } from './custom-style.directive'
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import { PipeappComponent } from './pipeapp/pipeapp.component'
     ParentcomponentComponent,
     ChildcomponentComponent,
     CsstestcomponentComponent,
-    PipeappComponent
+    PipeappComponent,
+    PageNotFoundComponent,
+    CustomStyleDirective
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,8 @@ import { PipeappComponent } from './pipeapp/pipeapp.component'
     NgbModule,
     MatButtonModule,
     MatSliderModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    RoutingmoduleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
