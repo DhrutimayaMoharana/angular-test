@@ -27,7 +27,8 @@ import { CsstestcomponentComponent } from './csstestcomponent/csstestcomponent.c
 import { PipeappComponent } from './pipeapp/pipeapp.component';
 import {RoutingmoduleModule} from './routingmodule/routingmodule.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { CustomStyleDirective } from './custom-style.directive'
+import { CustomStyleDirective } from './custom-style.directive';
+import { DirectiveComponentsComponent } from './directive-components/directive-components.component'
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { CustomStyleDirective } from './custom-style.directive'
     CsstestcomponentComponent,
     PipeappComponent,
     PageNotFoundComponent,
-    CustomStyleDirective
+    CustomStyleDirective,
+    DirectiveComponentsComponent
   ],
   imports: [
     BrowserModule,
