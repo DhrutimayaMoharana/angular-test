@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {UserComponent} from './routingmodule/user/user.component'
-import {AdminComponent} from './routingmodule/admin/admin.component'
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component'
+import { UserComponent } from './routingmodule/user/user.component'
+import { AdminComponent } from './routingmodule/admin/admin.component'
 
 const routes: Routes = [
+
+  // {
+  //   path: 'user',
+  //   component: UserComponent
+  // },
+  // {
+  //   path: 'admin',
+  //   component: AdminComponent
+  // }
+
   {
-    path:'user',
-    component:UserComponent
-  },
-  {
-    path:'admin',
-    component:AdminComponent
-  },
-  {
-    path:'**',
-    component:PageNotFoundComponent
+    path: 'lazyloadsadmin',
+    loadChildren: () => import('./lazyloadadmin/lazyadminview/lazyadminview.component')
+      .then(mod => mod.LazyadminviewComponent)
   }
+
 ];
 
 @NgModule({

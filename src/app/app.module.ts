@@ -28,7 +28,12 @@ import { PipeappComponent } from './pipeapp/pipeapp.component';
 import {RoutingmoduleModule} from './routingmodule/routingmodule.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CustomStyleDirective } from './custom-style.directive';
-import { DirectiveComponentsComponent } from './directive-components/directive-components.component'
+import { DirectiveComponentsComponent } from './directive-components/directive-components.component';
+import { ServiceCallCompanentComponent } from './service-call-companent/service-call-companent.component'
+import {HttpClientModule} from '@angular/common/http';
+import { ModelComponent } from './model/model.component';
+import { UsersModule } from './users/users.module';
+import {AdminModule} from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -51,7 +56,9 @@ import { DirectiveComponentsComponent } from './directive-components/directive-c
     PipeappComponent,
     PageNotFoundComponent,
     CustomStyleDirective,
-    DirectiveComponentsComponent
+    DirectiveComponentsComponent,
+    ServiceCallCompanentComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +69,10 @@ import { DirectiveComponentsComponent } from './directive-components/directive-c
     MatButtonModule,
     MatSliderModule,
     MatProgressSpinnerModule,
-    RoutingmoduleModule
+    RoutingmoduleModule,
+    HttpClientModule,
+    UsersModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

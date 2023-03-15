@@ -1,0 +1,40 @@
+<!-- <p>service-call-companent works!</p> -->
+
+<!-- <h1>NAME : {{data.name}}</h1>
+<h2>AGE : {{data.age}}</h2>
+<h3>CODE : {{data.code}}</h3> -->
+
+<div class="custom-select" style="width:200px;">
+    <select #changeONClick (change)="setOnchange(changeONClick.value)">
+        <option ngModel value="true">True</option>
+        <option ngModel value="false">False</option>
+        <option ngModel value="none">None</option>
+    </select>
+</div>
+
+<table class="companyTable">
+    <tr class="companyTableHead">
+        <th class="companyHead">ID</th>
+        <th class="companyHead">TITLE</th>
+        <th class="companyHead">USER ID</th>
+        <th class="companyHead">COMPLETED</th>
+    </tr>
+    <ng-container *ngIf="noneFilter===false">
+        <tr class="companyTableData" *ngFor="let item of company">
+            <ng-template [ngIf]="item.completed==filter">
+                <td class="companyData">{{item.id}}</td>
+                <td class="companyData">{{item.title}}</td>
+                <td class="companyData">{{item.userId}}</td>
+                <td class="companyData">{{item.completed}}</td>
+            </ng-template>
+        </tr>
+    </ng-container>
+    <ng-container *ngIf="noneFilter===true">
+        <tr class="companyTableData" *ngFor="let item of company">
+            <td class="companyData">{{item.id}}</td>
+            <td class="companyData">{{item.title}}</td>
+            <td class="companyData">{{item.userId}}</td>
+            <td class="companyData">{{item.completed}}</td>
+        </tr>
+    </ng-container>
+</table>

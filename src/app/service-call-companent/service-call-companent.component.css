@@ -1,0 +1,21 @@
+.companyTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.companyData {
+    text-align: left;
+}
+
+.companyHead {
+    text-align: center;
+}
+
+
+.companyHead,
+.companyData {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
